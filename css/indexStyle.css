@@ -1,0 +1,43 @@
+
+
+
+
+
+main>.first>#info {
+  
+    margin: 55px;
+    padding: 25px;
+    background: url("../images/places/back.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 5px;
+    text-align: justify;
+    text-justify: auto;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.32);
+    z-index: 1;
+}
+
+/* information */
+
+#info>h2 {
+    font-size: 24px;
+}
+
+#info>p {
+    text-indent: 50px;
+    word-spacing: 5px;
+    padding: 10px;
+    font-size: 18px;
+
+    box-sizing: border-box;
+    line-height: 29px;
+    overflow: auto;
+    
+}
+
+
+
+
+
+

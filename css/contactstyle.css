@@ -1,0 +1,85 @@
+
+
+
+/*contact-form*/
+
+
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+    color: rgba(1, 25, 44, 0.8);
+    overflow-y: auto;
+    border-radius: 3px; 
+}
+
+input[type=submit] {
+    background-color: #01192c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(1, 25, 44, 0.3);
+    transition: all ease-in-out .4s;
+}
+
+input[type=submit]:hover {
+    transform: translate(-1.5px,-1.5px);
+    box-shadow: 5px 5px 4px rgba(1, 25, 44, 0.3);
+}
+
+input[type=submit]:active {
+    transform: translate(1.5px, 1.5px);
+}
+
+.contact-form {
+    padding: 10px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.contact-us {
+    text-align: center;
+    color: rgba(1, 25, 44, 0.8);
+    font-weight: 700;
+}
+
+
+
+.column form label {
+    color: rgba(1, 25, 44, 0.8);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#gmap_canvas {
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px rgba(1, 25, 44, 0.3); 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+
+
+
