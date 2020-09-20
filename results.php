@@ -19,12 +19,11 @@ include("functions/functions.php");
        <!-- NAVIGATION BAR STARTS HERE --> 
         <div class="menubar">
             <ul id="menu">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="all_products.php">ALL PRODUCTS</a></li>
-                <!-- <li><a href="customer/my_account.php">MY ACCOUNTS</a></li> -->
-                <li><a href="customer_login.php">Login</a></li>
-                <!-- <li><a href="cart.php">SHOPPING CART</a></li> -->
-                <li><a href="contact_us.php">CONTACT US</a></li>
+                              <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
+						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
            </ul>
 
                 <div id="form">
