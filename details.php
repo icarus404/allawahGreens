@@ -9,7 +9,7 @@ include("functions/functions.php");
 ?>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
  <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
-	
+ <link rel="stylesheet" href ="styles/style.css" media="all" />	
 	
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">

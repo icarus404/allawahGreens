@@ -2,53 +2,53 @@
 <?php
 session_start();
 include("functions/functions.php");
-// $_SESSION["qty"]="1";
 
 ?>
-
-
+<?php
+	require_once("head.php");
+?>
 
 <html>
-<head>
-<title>ONLINE SHOPPING...!</title>
-
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
+	
 	<link rel="stylesheet" href ="styles/style.css" media="all" />
-
-</head>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
-     <!-- MAIN CONTAINER STARTS FROM HERE--> 
-    <div class="main">
-    
-        <!-- HEADER STARTS HERE -->    
-         <div class="header">
-            
-              <a href="index.php"><img id="logo_image" src="images/logo"/></a>
-              <img id="logo_image" src="images/logo1" style="width: 60%" /> 
 
 
-         </div>  
+	
+         
         <!-- HEADER ENDS HERE -->
         
        <!-- NAVIGATION BAR STARTS HERE --> 
-        <div class="menubar">
-            <ul id="menu">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="all_products.php">ALL PRODUCTS</a></li>
-                <li><a href="customer/my_account.php">MY ACCOUNTS</a></li>
-                <li><a href="">SIGN UP</a></li>
-                <li><a href="cart.php">SHOPPING CART</a></li>
-                <li><a href="#">CONTACT US</a></li>
-           </ul>
-
-                <div id="form">
+       <nav class="navbar navbar-expand-sm p-0 sticky-top">
+			<div class="row container-fluid">
+			<!-- <div class="row"> -->
+				<div class="col-md-8">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				  	<i class="fa fa-bars" style="color: white;"></i>
+				</button>
+				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
+				  	<ul class="navbar-nav">
+                        <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
+						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
+                        </ul>
+                        </div>
+					</div>
+          <div id="form">
 		            <form method="get" action="results.php" enctype="multipart/form-data">
 		                <input type="text" name="user_query" placeholder="Feel Free To Search" />
 		                <input  type="submit" name="search" value="search" />
 		            </form>
                 </div>
-
-
-       </div>
+				<!-- </div> -->
+			</div>  
+		</nav>
      	 <!-- NAVIGATION BAR ENDS HERE --> 
          
      		
@@ -278,10 +278,9 @@ include("functions/functions.php");
 
         
 
-         <div id="footer">
-                          <h2 style="text-align: center;padding-top: 10px ">&copy By ASHUTOSH RAJ</h2>
-         </div>
-
+     <?php
+	require_once("footer.php");
+?>
 
 
 
