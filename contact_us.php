@@ -20,26 +20,42 @@ include("functions/functions.php");
 <body>
 	
 <nav class="navbar navbar-expand-sm p-0 sticky-top">
-			<div class="container p-0">	
+			<div class="row container-fluid">
+			<!-- <div class="row"> -->
+				<div class="col-md-8">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				  	<i class="fa fa-bars" style="color: white;"></i>
 				</button>
 				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
 				  	<ul class="navbar-nav">
-						<li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
+						<li class="nav-item"><a href="index.php" class="nav-link p-3">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">Login</a></li>
 						<li class="nav-item"><a href="road.php" class="nav-link p-3">My Account</a></li>
 						<li class="nav-item"><a href="mechanics.php?login=" class="nav-link p-3">for mechanics</a></li>
-						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">contact us</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3" id="active">contact us</a></li>
                         </ul>
                         </div>
-                        <div id="form">
-		            <form class="form-inline flex-grow-1 order-3" method="get" action="results.php" enctype="multipart/form-data">
-		                <input type="text" name="user_query" placeholder="Feel Free To Search" class="form-control flex-fill"/>
-		                <button  type="submit"  class="d-none d-md-inline btn btn-dark" ><i class="fa fa-search"></i></button>
+					</div>
+					<div class="col-md-4">
+						
+		            <form method="get" action="results.php" enctype="multipart/form-data">
+					<div class="row">
+						<div class="form-group col-md-8">
+						<input type="text" name="user_query" placeholder="Feel Free To Search" />
+					</div>
+					<div class="form-group col-md-4 searchbox">
+						<input  type="submit"  name="search" value="search" />
+					</div>
 		            </form>
-                 
+				
+				<!-- <form>
+					<input type="text" />
+					<input type="submit" value="search">
+</form> -->
+					
+				
 				</div>
+				<!-- </div> -->
 			</div>  
 		</nav>
 		

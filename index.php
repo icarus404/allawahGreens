@@ -9,33 +9,46 @@ include("functions/functions.php");
 ?>
 
 <html>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
-<!-- <link rel="stylesheet" href ="css/reset.css"/> -->
+
 
 	
          
         <!-- HEADER ENDS HERE -->
         
        <!-- NAVIGATION BAR STARTS HERE --> 
-        <div class="menubar">
-            <ul id="menu">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="all_products.php">ALL PRODUCTS</a></li>
-                <!-- <li><a href="customer/my_account.php">MY ACCOUNTS</a></li> -->
-                <li><a href="customer_login.php">Login</a></li>
-                <!-- <li><a href="cart.php">SHOPPING CART</a></li> -->
-                <li><a href="contact_us.php">CONTACT US</a></li>
-           </ul>
-
-                <div id="form">
+       <nav class="navbar navbar-expand-sm p-0 sticky-top">
+			<div class="row container-fluid">
+			<!-- <div class="row"> -->
+				<div class="col-md-8">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				  	<i class="fa fa-bars" style="color: white;"></i>
+				</button>
+				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
+				  	<ul class="navbar-nav">
+						<li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">Login</a></li>
+						<li class="nav-item"><a href="road.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="mechanics.php?login=" class="nav-link p-3">for mechanics</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">contact us</a></li>
+                        </ul>
+                        </div>
+					</div>
+          <div id="form">
 		            <form method="get" action="results.php" enctype="multipart/form-data">
 		                <input type="text" name="user_query" placeholder="Feel Free To Search" />
 		                <input  type="submit" name="search" value="search" />
 		            </form>
                 </div>
-
-
-       </div>
+				<!-- </div> -->
+			</div>  
+		</nav>
      	 <!-- NAVIGATION BAR ENDS HERE --> 
          
      		

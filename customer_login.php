@@ -2,14 +2,53 @@
 include("includes/db.php");
 ?>
 
+?>
+<?php
+	require_once("head.php");
+?>
+
+<html>
+<body>
+<!-- <link rel="stylesheet" href ="css/reset.css"/> -->
+
+	
+         
+        <!-- HEADER ENDS HERE -->
+        
+       <!-- NAVIGATION BAR STARTS HERE --> 
+        <div class="menubar">
+            <ul id="menu">
+                <li><a href="index.php">HOME</a></li>
+                <li><a href="all_products.php">ALL PRODUCTS</a></li>
+                <!-- <li><a href="customer/my_account.php">MY ACCOUNTS</a></li> -->
+                <li><a href="customer_login.php">Login</a></li>
+                <!-- <li><a href="cart.php">SHOPPING CART</a></li> -->
+                <li><a href="contact_us.php">CONTACT US</a></li>
+           </ul>
+
+                <div id="form">
+		            <form method="get" action="results.php" enctype="multipart/form-data">
+		                <input type="text" name="user_query" placeholder="Feel Free To Search" />
+		                <input  type="submit" name="search" value="search" />
+		            </form>
+                </div>
+
+
+       </div>
+     	 <!-- NAVIGATION BAR ENDS HERE --> 
+         
 
 
 <div id="customer_login">
- <link rel="stylesheet" href ="styles/style.css" media="all" />	   
-	
+ <!-- <link rel="stylesheet" href ="styles/style.css" media="all" />	     -->
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <main class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-md-4 offset-md-4">
+
         <form  method="post" action="customer_login.php">
 
-            <table width="700" align="center" >
+            <!-- <table width="700" align="center" >
             	<tr align="center">
             		 
              <td colspan="4"><br><br> <h2><i> Log In &emsp; </i> <b>OR</b> &emsp;<i>Register</i>  </h2></td>
@@ -36,12 +75,25 @@ include("includes/db.php");
 
 
 
-            </table>
+            </table> -->
+            <h4>Login to your account</h4>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="minimum 8 characters" class="form-control">
+            </div>
+            <button class="btn btn-dark" type="submit">Login</button>
 
             <h3 style="float:center; padding:25px; al"><a href="customer_register.php">New? Register Here</a></h3>
              
  </form>
 
+ </div>
+      </div>
+    </main>
 
 <?php
 

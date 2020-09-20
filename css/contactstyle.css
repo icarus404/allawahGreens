@@ -76,7 +76,11 @@ input[type=submit]:active {
     clear: both;
 }
 
-
+/* search box css */
+.searchbox{
+    padding-left: 0px;
+    padding-top: 10px;
+}
 
 
 
