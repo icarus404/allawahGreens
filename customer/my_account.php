@@ -5,7 +5,7 @@ include("functions/functions.php");
 
 ?>
 <?php
-	require_once("head.php");
+	require_once("head/head.php");
 ?>
 
 <html>
@@ -208,7 +208,7 @@ include("functions/functions.php");
         
 
          <div id="footer">
-                          <h2 style="text-align: center;padding-top: 10px ">&copy By ASHUTOSH RAJ</h2>
+                         
          </div>
 
 

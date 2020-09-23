@@ -1,52 +1,64 @@
 <?php
 include("includes/db.php");
+include("functions/functions.php");
 ?>
 
-?>
 <?php
 	require_once("head.php");
 ?>
 
 <html>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
-<!-- <link rel="stylesheet" href ="css/reset.css"/> -->
+
 
 	
          
         <!-- HEADER ENDS HERE -->
         
        <!-- NAVIGATION BAR STARTS HERE --> 
-        <div class="menubar">
-            <ul id="menu">
-                <li><a href="index.php">HOME</a></li>
-                <li><a href="all_products.php">ALL PRODUCTS</a></li>
-                <!-- <li><a href="customer/my_account.php">MY ACCOUNTS</a></li> -->
-                <li><a href="customer_login.php">Login</a></li>
-                <!-- <li><a href="cart.php">SHOPPING CART</a></li> -->
-                <li><a href="contact_us.php">CONTACT US</a></li>
-           </ul>
-
-                <div id="form">
+       <nav class="navbar navbar-expand-sm p-0 sticky-top">
+			<div class="row container-fluid">
+			<!-- <div class="row"> -->
+				<div class="col-md-8">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				  	<i class="fa fa-bars" style="color: white;"></i>
+				</button>
+				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
+				  	<ul class="navbar-nav">
+                        <li class="nav-item"><a href="index.php" class="nav-link p-3" >HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3" id="active">LOGIN</a></li>
+						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
+                        </ul>
+                        </div>
+					</div>
+          <div id="form">
 		            <form method="get" action="results.php" enctype="multipart/form-data">
 		                <input type="text" name="user_query" placeholder="Feel Free To Search" />
 		                <input  type="submit" name="search" value="search" />
 		            </form>
                 </div>
-
-
-       </div>
+				<!-- </div> -->
+			</div>  
+		</nav>
      	 <!-- NAVIGATION BAR ENDS HERE --> 
-         
 
 
-<div id="customer_login">
- <!-- <link rel="stylesheet" href ="styles/style.css" media="all" />	     -->
- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- <main class="container-fluid">
+
+ 
+<main class="container-fluid">
       <div class="row mt-4">
         <div class="col-md-4 offset-md-4">
-
-        <form  method="post" action="customer_login.php">
+	
+        <div id="customer_login">
+        <form  method="post" action="">
 
             <!-- <table width="700" align="center" >
             	<tr align="center">
@@ -82,18 +94,15 @@ include("includes/db.php");
               <input type="email" id="email" name="email" placeholder="you@example.com" class="form-control">
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="minimum 8 characters" class="form-control">
+              <label for="pass">Password</label>
+              <input type="password" id="password" name="pass" placeholder="minimum 8 characters" class="form-control">
             </div>
-            <button class="btn btn-dark" type="submit">Login</button>
+            <button class="btn btn-dark" type="submit" name="login">Login</button>
 
             <h3 style="float:center; padding:25px; al"><a href="customer_register.php">New? Register Here</a></h3>
              
  </form>
 
- </div>
-      </div>
-    </main>
 
 <?php
 
@@ -133,7 +142,7 @@ include("includes/db.php");
             {
                  $_SESSION['customer_email']=$c_email;
                echo "<script> alert('You logged in Successfully..!') </script>";
-                echo "<script>window.open('checkout.php','_self')</script>";
+                echo "<script>window.open('index.php','_self')</script>";
             }
 
 
@@ -149,7 +158,9 @@ include("includes/db.php");
 
 
 </div>  
-
+</div>
+      </div>
+    </main>
 
 
   

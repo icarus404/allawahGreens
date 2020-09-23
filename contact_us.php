@@ -31,7 +31,7 @@ include("functions/functions.php");
 						<li class="nav-item"><a href="index.php" class="nav-link p-3">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">Login</a></li>
 						<li class="nav-item"><a href="road.php" class="nav-link p-3">My Account</a></li>
-						<li class="nav-item"><a href="mechanics.php?login=" class="nav-link p-3">for mechanics</a></li>
+						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3" id="active">contact us</a></li>
                         </ul>
                         </div>

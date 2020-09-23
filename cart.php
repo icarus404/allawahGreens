@@ -34,7 +34,7 @@ include("functions/functions.php");
 				  	<ul class="navbar-nav">
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
-						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
 						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
@@ -90,7 +90,7 @@ include("functions/functions.php");
                    if(!isset($_SESSION['customer_email']))
                    {
                      
-                     echo "<a href='checkout.php' style='color:red; text-decoration:none;'>Login</a>";
+                     echo "<a href='customer_login.php' style='color:red; text-decoration:none;'>Login</a>";
                    }
 
                    else
@@ -191,7 +191,7 @@ include("functions/functions.php");
 
                                                        ?>
 
-                                                	<td><br><br><br><?php echo "&#8377 $single_price";  ?><br></td>
+                                                	<td><br><br><br><?php echo "$ $single_price";  ?><br></td>
 
 
                                                 </tr>
@@ -203,7 +203,7 @@ include("functions/functions.php");
 
                                             <tr align="center"> 
                                             	<td align="right" colspan="3"><br><br><br><b>Sub Total: </b></td>
-                                            	<td ><br><br><br><?php echo " &#8377 $total";  ?></td>
+                                            	<td ><br><br><br><?php echo " $ $total";  ?></td>
 
 
 

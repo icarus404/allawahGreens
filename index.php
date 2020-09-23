@@ -34,7 +34,7 @@ include("functions/functions.php");
 				  	<ul class="navbar-nav">
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
-						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
 						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
@@ -118,7 +118,7 @@ include("functions/functions.php");
                    else
                    {
                       
-                       echo "<a href='logout.php' style='color:red; text-decoration:none'>Logout</a>";
+                       echo "<a href='customer/logout.php' style='color:red; text-decoration:none'>Logout</a>";
                    }
                ?>
 
