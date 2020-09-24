@@ -63,8 +63,9 @@ include("functions/functions.php");
      		
      
      <!-- CONTENTS SECTION START HERE -->
-              <div class="content">
-          
+     <div class="main container-fluid mt-4">
+     <div class="row">
+                <div class="col-md-2">
 			            <div id="sidebar">
 			                <div id="sidebar_title">Categories</div>
 			                 
@@ -154,8 +155,8 @@ include("functions/functions.php");
     </div>
      <!-- CONTENTS SECTION ENDS HERE -->
 
-        
-
+     </div>
+                                            </div>
      <?php
 	require_once("footer.php");
 ?>
@@ -163,7 +164,7 @@ include("functions/functions.php");
 
 
 
-</div>
+
 <!-- MAIN CONTAINER ENDS HERE-->
 
 

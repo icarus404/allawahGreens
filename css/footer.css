@@ -1,78 +1,4 @@
 
-footer {
-    grid-area: index-footer;
-    position: static;
-    bottom: 0;
-    width: 100%;
-}
-@media (max-width: 1468px) {
-
-    .wrapper {
-        grid-template-rows: 120px 100px 500px 380px;
-    }
-}
-
-@media (max-width: 1025px) {
-
-    .wrapper {
-        grid-template-rows: 120px 100px 500px 410px;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .wrapper {
-        grid-template-rows: 120px 100px 500px 870px;
-    }
-
-    .title {
-         grid-template-columns: 77% 23%;
-    }
-}
-
-
-@media (max-width: 960px) {
-    .wrapper {
-        grid-template-rows: 120px 100px 500px 870px;
-    }
-
-    .title {
-        grid-template-columns: 78% 22%;
-    }
-}
-
-@media (max-width: 725px) {
-    .wrapper {
-        grid-template-rows: 120px 100px 500px 870px;
-    }
-}
-
-
-@media (max-width: 685px) {
-    .wrapper {
-        grid-template-rows: 120px 30px 1000px 890px;
-    }
-
-    .logo-ptitle-bar {
-        grid-template-columns: 25% 75%;
-    }
-
-    .title {
-        grid-template-columns: 77% 23%;
-    }
-}
-
-@media (max-width: 420px) {
-    .wrapper {
-        grid-template-rows: 120px 30px 1000px 940px;
-    }
-}
-
-@media (max-width: 325px) {
-    .wrapper {
-        grid-template-rows: 120px 30px 1100px 980px;
-    }
-}
 
 
 .footer-distributed {
@@ -85,7 +11,7 @@ footer {
 
     padding: 0;
     /* margin-top: 100px;  */
-    position: fixed; 
+    position: static; 
     bottom: 0;
 }
 

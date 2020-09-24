@@ -12,7 +12,7 @@ include("functions/functions.php");
 <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
 	
-	<link rel="stylesheet" href ="styles/style.css" media="all" />
+	<!-- <link rel="stylesheet" href ="styles/style.css" media="all" /> -->
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
@@ -54,8 +54,9 @@ include("functions/functions.php");
      		
      
      <!-- CONTENTS SECTION START HERE -->
-              <div class="content">
-                                     
+     <div class="main container-fluid mt-4">
+        <div class="row">
+                <div class="col-md-2">
 			            <div id="sidebar">
 			                <div id="sidebar_title">Categories</div>
 			                 
@@ -70,42 +71,61 @@ include("functions/functions.php");
 
 			                      </ul> 
 			                </div>
-
+                            </div>
 
 
 
           <div id="content_area">
-                                     <?php cart(); ?>
-             <div id=shopping_cart>
+          <?php cart(); ?>
+            <div class="col-md-10">                  
+                <div id="shopping_cart">
                
-                  <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
-                        <b style="font-size: 25px;">   Welcome ! &emsp; &emsp; &emsp; &emsp;</b>
-                  &emsp;<i>Total Items:<?php total_items(); ?> </i> &emsp;<b>Total Price:</b><?php total_price(); ?>&emsp;
-                  <a href="index.php" style="color: yellow; text-decoration: none "><i>Back to </i><b>Home &emsp;</b></a>
-                                        <!--   &emsp;   used for creating space -->
+                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
+
+                    <?php
+                            if(isset($_SESSION['customer_email']))
+                            {
+                               echo "<b>Welcome &emsp;</b>".$_SESSION['customer_email'];
+
+                            }
+
+                            else
+                            {
+
+                              echo "<b>Welcome Guest!</b>";
+                            }
+ 
 
 
-                       <?php
+                    ?>
+
+
+                        
+                   &emsp;<i>Total Items:<?php total_items(); ?> </i> &emsp;<b>Total Price:</b><?php total_price(); ?>&emsp;
+                  <a href="cart.php" style="color: yellow; text-decoration: none"><i>Go to Cart &emsp;</i></a>   <!--   &emsp;   used for creating space -->
+                
+             
+
+                      <?php
 
                    if(!isset($_SESSION['customer_email']))
                    {
                      
-                     echo "<a href='customer_login.php' style='color:red; text-decoration:none;'>Login</a>";
+                     echo "<a href='customer_login.php.php' style='color:red; text-decoration:none;'>Login</a>";
                    }
 
                    else
                    {
                       
-                       echo "<a href='logout.php' style='color:red; text-decoration:none'>Logout</a>";
+                       echo "<a href='customer/logout.php' style='color:red; text-decoration:none'>Logout</a>";
                    }
-               ?>
+                      ?>
 
+                      </span>
 
-
-                </span>
-
-             </div> 
-
+                 
+                 </div>
+                 <div class="row">
              
 			              <div id="products_box">
 			                       <br>
@@ -148,7 +168,7 @@ include("functions/functions.php");
 														            $values=array_sum($product_price);
 														            $total +=$values;
 
-														         //echo " &#8377 $total";  
+														         //echo " $ $total";  
 
                                                   
                                                   
@@ -271,24 +291,17 @@ include("functions/functions.php");
 			              </div>
           </div>
 
-
+          </div>
      
     </div>
      <!-- CONTENTS SECTION ENDS HERE -->
 
-        
-
+                                
      <?php
 	require_once("footer.php");
 ?>
 
-
-
-</div>
 <!-- MAIN CONTAINER ENDS HERE-->
-
-
-
 
 
 </body>

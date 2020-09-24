@@ -15,6 +15,8 @@ include("functions/functions.php");
 	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
 <body>
 
 
@@ -55,33 +57,33 @@ include("functions/functions.php");
      
      <!-- CONTENTS SECTION START HERE -->
      <div class="main container-fluid mt-4">
-     <div class="row">
+        <div class="row">
                 <div class="col-md-2">
                                      
-			            <div id="sidebar">
-			                <div id="sidebar_title">Categories</div>
+			         <div id="sidebar">
+			            <div id="sidebar_title">Categories</div>
 			                 
-			                    <ul id="cats">
-			                             <?php  getCats();  ?> 
+			                <ul id="cats">
+			                    <?php  getCats();  ?> 
 
-			                     </ul>
+			                </ul>
 
 			                <div id="sidebar_title">Brands</div>
-			                      <ul id="cats">
-			                             <?php  getBrands();  ?>
+			                    <ul id="cats">
+			                        <?php  getBrands();  ?>
 
-			                      </ul> 
-			                </div>
+			                    </ul> 
+			        </div>
                 </div>
 
 
                       
           
-                                     <?php cart(); ?>
+            <?php cart(); ?>
             <div class="col-md-10">                  
-             <div id="shopping_cart">
+                <div id="shopping_cart">
                
-                  <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
+                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
 
                     <?php
                             if(isset($_SESSION['customer_email']))
@@ -107,12 +109,12 @@ include("functions/functions.php");
                 
              
 
-                 <?php
+                      <?php
 
                    if(!isset($_SESSION['customer_email']))
                    {
                      
-                     echo "<a href='checkout.php' style='color:red; text-decoration:none;'>Login</a>";
+                     echo "<a href='customer_login.php.php' style='color:red; text-decoration:none;'>Login</a>";
                    }
 
                    else
@@ -120,17 +122,15 @@ include("functions/functions.php");
                       
                        echo "<a href='customer/logout.php' style='color:red; text-decoration:none'>Logout</a>";
                    }
-               ?>
+                      ?>
 
-             
+                      </span>
 
-
-                </span>
-
-             </div>
+                 </div>
             <!-- </div>  -->
     <!-- </div> -->
-                  <!-- <div class="row"> -->
+                    <div class="row">
+                  
 			              <div id="products_box">
 			                  <?php
 			                       getpro();
@@ -138,34 +138,26 @@ include("functions/functions.php");
                            getbrandpro();  
 			                  ?>
 			              </div>
+                          
                     
                     </div>
-          
-
-
-     
     
      <!-- CONTENTS SECTION ENDS HERE -->
      
-        
-
-       
-
-
-
-
-
+ 
 <!-- MAIN CONTAINER ENDS HERE-->
 
-
+             </div>
+       
+            
 <?php
 	require_once("footer.php");
 ?>
-
-</div>
-
+    
 
 </body>
+
+
 </html>
 
 
