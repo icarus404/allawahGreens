@@ -38,8 +38,8 @@ include("includes/db.php");
 				</button>
 				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
 				  	<ul class="navbar-nav">
-                        <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
-						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
+                        <li class="nav-item"><a href="index.php" class="nav-link p-3" >HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3" id="active">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
@@ -59,8 +59,9 @@ include("includes/db.php");
          
      		
      
-     <!-- CONTENTS SECTION START HERE -->
-              <div class="content">
+	 <!-- CONTENTS SECTION START HERE -->
+	 
+              <!-- <div class="content">
                                      
 			            <div id="sidebar">
 			                <div id="sidebar_title">Categories</div>
@@ -89,89 +90,71 @@ include("includes/db.php");
                   <b style="color: yellow">Shopping Cart: </b> &emsp;<i>Total Items:<?php total_items(); ?> </i> &emsp;<b>Total Price:</b><?php total_price(); ?>&emsp;
                   <a href="cart.php" style="color: yellow; text-decoration: none "><i>Go to Cart</i></a>
                                         <!--   &emsp;   used for creating space -->
-                </span>
+                <!-- </span>
 
              </div> 
 
-      </div>
+      </div> -->
 
 
-   </div>
-     <!-- CONTENTS SECTION ENDS HERE -->
-           
-       <div id="register">
-            <form action="customer_register.php" method="post" enctype="multipart/form-data">
+   <!-- </div> --> 
+	 <!-- CONTENTS SECTION ENDS HERE -->
+	 <main class="container-fluid">
+        <div class="row mt-4">
+      	  	<div class="col-md-4 offset-md-4">
+				
+						<div id="register">
+							
+							<form action="customer_register.php" method="post" enctype="multipart/form-data">
+							    <h4>Register for an account</h4>
+								
+							<div class="form-group">
+								<label for="name">Name</label>	
+								<input type="text"  name="c_name" placeholder="John" required class="form-control">
+			 				 </div>
 
-            	<table  align="center" width="750">
-            		<tr><br>
-            			   <td colspan="2" align="center"  style="color: red"><h2>Create an Account</h2></td>		   
-            		</tr>
+							<div class="form-group">
+								<label for="email">Email</label>	
+								<input type="text" name="c_email" placeholder="you@example.com" required class="form-control">
+							  </div>
+							  
+							<div class="form-group">
+								<label for="password">Password</label>	
+								<input type="Password" name="c_pass" required class="form-control">
+							 </div>
+							 
+							<div class="form-group">
+								<label for="image">Image</label>	
+								<input type="file" name="c_image" required class="form-control">
+							 </div>
+							 
+						    <div class="form-group">
+								<label for="city">City</label>	
+								<input type="text" name="c_city" class="form-control">
+							 </div>
+							 
+							<div class="form-group">
+								<label for="contact">Contact No</label>	
+								<input type="text" name="c_contact" required class="form-control">
+							 </div>
+							 
+							<div class="form-group">
+								<label for="address">Address</label>	
+								<textarea cols="20" rows="1" name="c_address" class="form-control"></textarea>
+			 				</div>
+							
+						     <button class="btn btn-dark" type="submit" name="register">Register</button>
+					</form>
+				</div>
 
-
-            		<tr>
-
-            			<td align="right"><br>Name: </td>
-            			<td ><br><input type="text"  name="c_name" required></td>
-            		</tr>
-
-            		<tr>
-            			<td align="right">Email:</td>
-            			<td><input type="text" name="c_email" required></td>
-            		</tr>
-
-            		<tr>
-            			<td align="right">Password:</td>
-            			<td><input type="Password" name="c_pass" required></td>
-            		</tr>
-
-            		<tr>
-            			<td align="right">Image:</td>
-            			<td><input type="file" name="c_image" required></td>
-            		</tr>
-
-            		
-
-            		<tr>
-            			<td align="right">City:</td>
-            			<td><input type="text" name="c_city"></td>
-            		</tr>
-
-            		<tr>
-            			<td align="right">Contact No:</td>
-            			<td><input type="text" name="c_contact" required></td>
-            		</tr>
-            		
-            		<tr>
-            			<td align="right">Address:</td>
-                         <td>
-                         	   <textarea cols="20" rows="1" name="c_address"></textarea>
-                         </td>
-            		</tr>
-                   
-                   <tr align="center">
-                   	<td colspan="2"><input type="submit" name="register" value="Create Account"></td>
-                   </tr>
-
-
-
-            	</table>
-                           	
-
-
-            </form>
-  </div>
-
-
+			</div>
  
 
-</div>
-<!-- MAIN CONTAINER ENDS HERE-->
+     	</div>
+				<!-- MAIN CONTAINER ENDS HERE-->
 
-
-
-
-
-
+	
+	 </main>
 
 </body>
 </html>

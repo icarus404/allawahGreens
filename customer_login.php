@@ -60,49 +60,28 @@ include("functions/functions.php");
         <div id="customer_login">
         <form  method="post" action="">
 
-            <!-- <table width="700" align="center" >
-            	<tr align="center">
-            		 
-             <td colspan="4"><br><br> <h2><i> Log In &emsp; </i> <b>OR</b> &emsp;<i>Register</i>  </h2></td>
-
-            	</tr> 
-                 <tr >
-                 	<td align="right"><br><br><br><b>Email:</b></td>
-                 	<td><br><br><br><input type="text" name="email" placeholder="Enter Your Email" required></td>
-                 </tr>
-
-                 <tr>
-                 	<td align="right"><b>Password:</b></td>
-                 	<td><input type="Password" name="pass"  placeholder="Enter Your Password" required></td>
-                 </tr>    
-
-                  <tr align="right">
-                 	  <td ><a href="checkout.php?forgot_pass">Forgot Password</a></td>
-
-                 
-
-                 
-                 	<td align="center"><input type="submit" name="login" value="Login"/></td>
-                      </tr>
-
-
-
-            </table> -->
+            
             <h4>Login to your account</h4>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" class="form-control">
+              <input type="email"  name="email" placeholder="you@example.com" class="form-control">
             </div>
             <div class="form-group">
               <label for="pass">Password</label>
-              <input type="password" id="password" name="pass" placeholder="minimum 8 characters" class="form-control">
+              <input type="password"  name="pass" placeholder="minimum 8 characters" class="form-control">
             </div>
-            <!-- <button class="btn btn-dark" type="submit" name="login">Login</button> -->
-            <input type="submit" name="login" value="Login"/>
+            <button class="btn btn-dark" type="submit" name="login">Login</button>
+            
             <h3 style="float:center; padding:25px; al"><a href="customer_register.php">New? Register Here</a></h3>
              
- </form>
+        </form>
+        </div>  
+        </div>
+      </div>
+    </main>
 
+      </body>
+      </html>
 
 <?php
 
@@ -156,11 +135,6 @@ include("functions/functions.php");
 ?>
 
 
-
-</div>  
-</div>
-      </div>
-    </main>
 
 
   

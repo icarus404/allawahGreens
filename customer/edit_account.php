@@ -1,23 +1,24 @@
                                      <?php
                                       include("includes/db.php");
 
-                                    $user=$_SESSION['customer_email'];
+                                    $user=isset($_SESSION['customer_email']);
 
                                     $get_customer="select * from customers where customer_email='$user'";
                                     $run_customer=mysqli_query($con,$get_customer);
                                      $row_customer=mysqli_fetch_array($run_customer);
 
-                                     $c_id=$row_customer['customer_id']; 
-                                     $name=$row_customer['customer_name'];
-                                     $email=$row_customer['customer_email'];
-                                     $pass=$row_customer['customer_pass'];
+                                     $c_id=isset($row_customer['customer_id']); 
+                                     $name=isset($row_customer['customer_name']);
+                                     $email=isset($row_customer['customer_email']);
+                                     $pass=isset($row_customer['customer_pass']);
                                     //  $country=$row_customer['customer_country'];
-                                     $city=$row_customer['customer_city'];
-                                     $contact=$row_customer['customer_contact'];
-                                     $address=$row_customer['customer_address'];
-                                     $image=$row_customer['customer_image'];
+                                     $city=isset($row_customer['customer_city']);
+                                     $contact=isset($row_customer['customer_contact']);
+                                     $address=isset($row_customer['customer_address']);
+                                     $image=isset($row_customer['customer_image']);
                                                                           
-
+									 
+									 
                                      ?>
 
 
