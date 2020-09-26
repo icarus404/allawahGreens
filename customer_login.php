@@ -97,8 +97,8 @@ include("functions/functions.php");
               <label for="pass">Password</label>
               <input type="password" id="password" name="pass" placeholder="minimum 8 characters" class="form-control">
             </div>
-            <button class="btn btn-dark" type="submit" name="login">Login</button>
-
+            <!-- <button class="btn btn-dark" type="submit" name="login">Login</button> -->
+            <input type="submit" name="login" value="Login"/>
             <h3 style="float:center; padding:25px; al"><a href="customer_register.php">New? Register Here</a></h3>
              
  </form>
@@ -135,13 +135,13 @@ include("functions/functions.php");
             {
 
                      $_SESSION['customer_email']=$c_email;
-               echo "<script> alert('You Logged in Successfully..!') </script>";
+               echo "<script> alert('You're Logged in Successfully..!') </script>";
                 echo "<script>window.open('customer/my_account.php','_self')</script>";
             }
             else
             {
                  $_SESSION['customer_email']=$c_email;
-               echo "<script> alert('You logged in Successfully..!') </script>";
+               echo "<script> alert('You're Logged in Successfully..!') </script>";
                 echo "<script>window.open('index.php','_self')</script>";
             }
 
