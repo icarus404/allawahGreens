@@ -105,14 +105,14 @@ footer, header, hgroup, menu, nav, section {
 
 .content
       {
-       width: 1000px;
+       width: 100%;
        margin: auto;
       /* background: pink;*/
       }
 
     #content_area
                {
-   	           width:800px;
+   	           width:100%;
                margin: auto; 
                /*background:pink; */
               }

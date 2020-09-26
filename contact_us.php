@@ -30,7 +30,7 @@ include("functions/functions.php");
 				  	<ul class="navbar-nav">
 						<li class="nav-item"><a href="index.php" class="nav-link p-3">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">Login</a></li>
-						<li class="nav-item"><a href="road.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3" id="active">contact us</a></li>
                         </ul>

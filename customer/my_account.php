@@ -8,6 +8,8 @@ include("functions/functions.php");
 	require_once("head/head.php");
 ?>
 
+<style><?php include 'styles/style.css'; ?></style>
+
 <html>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
@@ -32,11 +34,11 @@ include("functions/functions.php");
 				</button>
 				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
 				  	<ul class="navbar-nav">
-						<li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
-						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
-						<li class="nav-item"><a href="my_account.php" class="nav-link p-3">My Account</a></li>
-						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
-						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
+						<li class="nav-item"><a href="../index.php" class="nav-link p-3" >HOME</a></li>
+						<li class="nav-item"><a href="../customer_login.php" class="nav-link p-3">LOGIN</a></li>
+						<li class="nav-item"><a href="my_account.php" class="nav-link p-3" id="active">My Account</a></li>
+						<li class="nav-item"><a href="../aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="../contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
                         </div>
 					</div>
@@ -51,12 +53,15 @@ include("functions/functions.php");
 		</nav>
      	 <!-- NAVIGATION BAR ENDS HERE --> 
          
-         
+          
      		
      
      <!-- CONTENTS SECTION START HERE -->
-              <div class="content">
-                                     
+     <div class="main container-fluid mt-4">
+        <div class="row">
+              
+            <div class="col-md-2">  
+              <div class="content">      
 			            <div id="sidebar">
 			                <div id="sidebar_title">My Account</div>
 			                 
@@ -90,135 +95,126 @@ include("functions/functions.php");
 			                     </ul>
 
 			              
-			                </div>
+			            </div>
+              </div>
+            </div>               
 
+            <div class="col-md-10"> 
+                <div id="content_area">
+                                        <?php cart(); ?>
+                            <div id="shopping_cart">
+                            
+                                <span style="float: left; font-size: 18px; padding: 5px; line-height: 40px">
 
-
-
-          <div id="content_area">
-                                     <?php cart(); ?>
-             <div id="shopping_cart">
-               
-                  <span style="float: left; font-size: 18px; padding: 5px; line-height: 40px">
-
-                    <?php
-                            if(isset($_SESSION['customer_email']))
-                            {
-                               echo "<b>Welcome &emsp;</b>".$_SESSION['customer_email'];
-
-                            }
-
-                      
- 
-
-
-                    ?>
-
-
-                        
-                  
-
-                 <?php
-
-                   if(!isset($_SESSION['customer_email']))
-                   {
-                     
-                     echo "<a href='checkout.php' style='color:red; text-decoration:none;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Login</a>";
-                   }
-
-                   else
-                   {
-                      
-                       echo "<a href='logout.php' style='color:red; text-decoration:none'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Logout</a>";
-                   }
-               ?>
-
-             
-
-
-                </span>
-
-             </div> 
-
-             
-			              <div id="products_box">
-
-			              
-                           
-                           <?php
-                                 if(!isset($_GET['my_orders']))
-                                 {
-
-                                 	if(!isset($_GET['edit_account']))
-                                 	{
-                                 		if(!isset($_GET['change_pass']))
-                                          {
-             
-                                           if(!isset($_GET['delete_account']))
+                                    <?php
+                                            if(isset($_SESSION['customer_email']))
                                             {
+                                            echo "<b>Welcome &emsp;</b>".$_SESSION['customer_email'];
+
+                                            }
+
+                                    
+                
+
+
+                                    ?>
+
+
+                                        <?php
+
+                                            if(!isset($_SESSION['customer_email']))
+                                            {
+                                                
+                                                echo "<a href='../customer_login.php' style='color:red; text-decoration:none;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Login</a>";
+                                            }
+
+                                            else
+                                            {
+                                                
+                                                echo "<a href='logout.php' style='color:red; text-decoration:none'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Logout</a>";
+                                            }
+                                        ?>
+
+                            
+                                </span>
+
+                            </div> 
+
+                
+                            <div id="products_box">
+    
+                                <?php
+                                    if(!isset($_GET['my_orders']))
+                                    {
+
+                                        if(!isset($_GET['edit_account']))
+                                        {
+                                            if(!isset($_GET['change_pass']))
+                                            {
+                
+                                            if(!isset($_GET['delete_account']))
+                                                {
+                                    
+                                                    echo 	"<h2> Welcome  $c_name </h2><br>";
+
+                                                    echo  "<b>You Can See Your orders progress by clicking this <a href='my_account.php?my_orders'>link</a></b>";
                                 
-                             echo 	"<h2> Welcome  $c_name </h2><br>";
+                                                }
 
-			                 echo  "<b>You Can See Your orders progress by clicking this <a href='my_account.php?my_orders'>link</a></b>";
-			                
-			             }
+                                            }
+                        
+                                        }
 
-                    }
-			         
-			         }
-
-			     }
+                                    }
 
 
-                        ?>
+                                ?>
 
 
 
-                        <?php
+                                <?php
 
-                          if(isset($_GET['edit_account']))
-                          {
-                              include("edit_account.php");
-                          }
+                                    if(isset($_GET['edit_account']))
+                                    {
+                                        include("edit_account.php");
+                                    }
 
-                               if(isset($_GET['change_pass']))
-                          {
-                              include("change_pass.php");
-                          }
+                                        if(isset($_GET['change_pass']))
+                                    {
+                                        include("change_pass.php");
+                                    }
 
-                           if(isset($_GET['delete_account']))
-                          {
-                              include("delete_account.php");
-                          }
-
-
+                                    if(isset($_GET['delete_account']))
+                                    {
+                                        include("delete_account.php");
+                                    }
 
 
-
-
-                        ?>
-                      			              </div>	
-          </div>
-
+                                ?>
+                            </div>	
+                </div>
+            </div>                       
 
      
-    </div>
+        </div>
      <!-- CONTENTS SECTION ENDS HERE -->
 
         
 
-         <div id="footer">
-                         
-         </div>
+    </div>
+       
+
+       
 
 
 
-
-</div>
 <!-- MAIN CONTAINER ENDS HERE-->
 
 
-
+<?php
+	require_once("footer/footer.php");
+?>
+    
 
 
 

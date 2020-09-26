@@ -11,7 +11,7 @@
                                      $name=$row_customer['customer_name'];
                                      $email=$row_customer['customer_email'];
                                      $pass=$row_customer['customer_pass'];
-                                     $country=$row_customer['customer_country'];
+                                    //  $country=$row_customer['customer_country'];
                                      $city=$row_customer['customer_city'];
                                      $contact=$row_customer['customer_contact'];
                                      $address=$row_customer['customer_address'];
@@ -69,7 +69,7 @@
             			<td><input type="file" name="c_image" ><img src="customer_images/<?php echo $image; ?>" width="80px;" height="80px;" /> </td>
             		</tr>
 
-            		<tr>
+            		<!-- <tr>
             			<td align="right">Country:</td>
             			<td>
             				 <select name="c_country" disabled="">
@@ -92,7 +92,7 @@
 
 
             			</td>
-            		</tr>
+            		</tr> -->
 
             		<tr>
             			<td align="right">City:</td>

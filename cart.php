@@ -12,7 +12,7 @@ include("functions/functions.php");
 <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
 	
-	<!-- <link rel="stylesheet" href ="styles/style.css" media="all" /> -->
+	<link rel="stylesheet" href ="styles/style.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <body>
@@ -35,7 +35,7 @@ include("functions/functions.php");
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
-						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
                         </div>
@@ -70,67 +70,67 @@ include("functions/functions.php");
 			                             <?php  getBrands();  ?>
 
 			                      </ul> 
-			                </div>
-                            </div>
+			            </div>
+                </div>
 
 
-
-          <div id="content_area">
-          <?php cart(); ?>
-            <div class="col-md-10">                  
-                <div id="shopping_cart">
+                <div class="col-md-10">
+                      <div id="content_area">
+                           <?php cart(); ?>
+                                      
+                        <div id="shopping_cart">
                
-                    <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
+                             <span style="float: center; font-size: 18px; padding: 5px; line-height: 40px">
 
-                    <?php
-                            if(isset($_SESSION['customer_email']))
-                            {
-                               echo "<b>Welcome &emsp;</b>".$_SESSION['customer_email'];
+                                <?php
+                                        if(isset($_SESSION['customer_email']))
+                                        {
+                                        echo "<b>Welcome &emsp;</b>".$_SESSION['customer_email'];
 
-                            }
+                                        }
 
-                            else
-                            {
+                                        else
+                                        {
 
-                              echo "<b>Welcome Guest!</b>";
-                            }
- 
+                                        echo "<b>Welcome Guest!</b>";
+                                        }
+            
 
 
-                    ?>
+                                ?>
 
 
                         
-                   &emsp;<i>Total Items:<?php total_items(); ?> </i> &emsp;<b>Total Price:</b><?php total_price(); ?>&emsp;
-                  <a href="cart.php" style="color: yellow; text-decoration: none"><i>Go to Cart &emsp;</i></a>   <!--   &emsp;   used for creating space -->
+                                 &emsp;<i>Total Items:<?php total_items(); ?> </i> &emsp;<b>Total Price:</b><?php total_price(); ?>&emsp;
+                                 <a href="cart.php" style="color: yellow; text-decoration: none"><i>Go to Cart &emsp;</i></a>   <!--   &emsp;   used for creating space -->
                 
              
 
-                      <?php
+                                <?php
 
-                   if(!isset($_SESSION['customer_email']))
-                   {
-                     
-                     echo "<a href='customer_login.php.php' style='color:red; text-decoration:none;'>Login</a>";
-                   }
+                                    if(!isset($_SESSION['customer_email']))
+                                    {
+                                        
+                                        echo "<a href='customer_login.php' style='color:red; text-decoration:none;'>Login</a>";
+                                    }
 
-                   else
-                   {
-                      
-                       echo "<a href='customer/logout.php' style='color:red; text-decoration:none'>Logout</a>";
-                   }
-                      ?>
+                                    else
+                                    {
+                                        
+                                        echo "<a href='customer/logout.php' style='color:red; text-decoration:none'>Logout</a>";
+                                    }
+                                ?>
 
-                      </span>
+                             </span>
 
                  
-                 </div>
+                        </div>
                  <div class="row">
              
 			              <div id="products_box">
 			                       <br>
 
-                                   <form action="" method="post" enctype="multipart/form-data">
+                            <form action="" method="post" enctype="multipart/form-data">
                                        <table align="center" width="700"  >
                                        	  <tr style="color: blue">
                                        	  	<th>Remove</th>
@@ -232,7 +232,7 @@ include("functions/functions.php");
                                             <tr align="center">
                                             	<td><br><input type="submit" name="update_cart" value="Update Cart"></td>
                                             	<td><br><input type="submit" name="continue" value="Continue Shopping"></td>
-                                                <td><br><button ><a  href="checkout.php" style="text-decoration: none; color:black;">Checkout</a></button></td>
+                                                <td><br><button ><a  href="index.php" style="text-decoration: none; color:black;">Checkout</a></button>&emsp;<h1 style="color:red; font-size:30px;">!!!Coming Soon!!!</h1></td>
 
 
                                             </tr>
@@ -241,16 +241,15 @@ include("functions/functions.php");
 
 
 
-                                       </table>
+                                    </table>
 
 
                                    	
-                                   </form>
+                            </form>
 
 
 
-                                  <?php
-
+                                <?php
 
                                  //function updatecart()
                                  {
@@ -286,17 +285,17 @@ include("functions/functions.php");
 
                                           //echo @$up_cart=updatecart();   
                                  }
-                              ?>
+                                ?>
 
 			              </div>
-          </div>
+                 </div>
 
-          </div>
+                </div>
      
-    </div>
+        </div>
      <!-- CONTENTS SECTION ENDS HERE -->
 
-                                
+     </div>                           
      <?php
 	require_once("footer.php");
 ?>

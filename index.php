@@ -37,7 +37,7 @@ include("functions/functions.php");
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
-						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
                         </div>
@@ -114,7 +114,7 @@ include("functions/functions.php");
                    if(!isset($_SESSION['customer_email']))
                    {
                      
-                     echo "<a href='customer_login.php.php' style='color:red; text-decoration:none;'>Login</a>";
+                     echo "<a href='customer_login.php' style='color:red; text-decoration:none;'>Login</a>";
                    }
 
                    else

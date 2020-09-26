@@ -1,19 +1,57 @@
-<!DOCTYPE html>
+<!Doctype>
+<?php
+session_start();
+include("functions/functions.php");
+
+?>
+<?php
+	require_once("head.php");
+?>
 
 <html>
-
-        {% include 'partials/heading.twig' %}
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
 	
-    
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-<link rel="stylesheet" type="text/css" href="css/style.css">
 
-   <body>
-			
-			<div class="nav-menu">
-				{% include 'partials/navigation.twig' %}
-			</div>
+<body>
+
+
+	
+         
+        <!-- HEADER ENDS HERE -->
+        
+       <!-- NAVIGATION BAR STARTS HERE --> 
+       <nav class="navbar navbar-expand-sm p-0 sticky-top">
+			<div class="row container-fluid">
+			<!-- <div class="row"> -->
+				<div class="col-md-8">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				  	<i class="fa fa-bars" style="color: white;"></i>
+				</button>
+				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
+				  	<ul class="navbar-nav">
+                        <li class="nav-item"><a href="index.php" class="nav-link p-3" >HOME</a></li>
+						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
+						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="aboutUs" class="nav-link p-3" id="active">ABOUT US</a></li>
+						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
+                        </ul>
+                        </div>
+					</div>
+          <div id="form">
+		            <form method="get" action="results.php" enctype="multipart/form-data">
+		                <input type="text" name="user_query" placeholder="Feel Free To Search" />
+		                <input  type="submit" name="search" value="search" />
+		            </form>
+                </div>
+				<!-- </div> -->
+			</div>  
+		</nav>
+     	 <!-- NAVIGATION BAR ENDS HERE --> 
 			
 
 							<h1 class="page-title">About Us</h1>
@@ -61,7 +99,10 @@
 				</div>
             </div>
 			
-	{% include 'partials/footer.twig' %}
+			<?php
+	require_once("footer.php");
+?>
+   
         
 
         </div>

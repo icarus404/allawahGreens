@@ -31,7 +31,7 @@ include("functions/functions.php");
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">MY ACCOUNT</a></li>
-						<li class="nav-item"><a href="about_us" class="nav-link p-3">ABOUT US</a></li>
+						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
                         </div>
@@ -64,7 +64,7 @@ include("functions/functions.php");
      
      <!-- CONTENTS SECTION START HERE -->
      <div class="main container-fluid mt-4">
-     <div class="row">
+        <div class="row">
                 <div class="col-md-2">
 			            <div id="sidebar">
 			                <div id="sidebar_title">Categories</div>
@@ -77,26 +77,26 @@ include("functions/functions.php");
 			                      <ul id="cats">
 			                             <?php  getBrands();  ?>
 			                      </ul> 
-			                </div>
+			            </div>
+                </div>
 
-
-
-
-          <div id="content_area" >
-             <div id=shopping_cart>
+                
+             <div class="col-md-10">
+                 <div id="content_area" >
+                     <div id=shopping_cart>
                
-                  <span style="float: right; font-size: 18px; padding: 5px; line-height: 40px">
-                  Welcome !
-                  <b style="color: yellow">Shopping Cart:</b>Total Items: Total Price: </b>
-                  <a href="cart.php" style="color: yellow ">Go to Cart</a>
+                         <span style="float: left; font-size: 18px; padding: 5px; line-height: 40px">
+                                Welcome !
+                                <b style="color: yellow">Shopping Cart:</b>Total Items: Total Price: </b>
+                                <a href="cart.php" style="color: yellow ">Go to Cart</a>
 
-                </span>
+                        </span>
 
-             </div> 
+                     </div> 
              
 			              
 			                                  
-			                               <?php   
+			                     <?php   
 
                                      if(isset($_GET['pro_id']))
                                      {    
@@ -127,7 +127,7 @@ include("functions/functions.php");
                                                                     <p> $ <b>$pro_price</b></p> 
                                                                     
                                                                     <a href='index.php' style='float:left'>Go Back</a>   
-                                                                    <a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to cart</button></a>
+                                                                    <a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to cart</button></a>
                                                                       
                                                                       <br></br>
                                                                        <p>$pro_desc</p>
@@ -136,27 +136,15 @@ include("functions/functions.php");
 
                                                     }
                                                 }    
-                                           ?>         
+                                 ?>         
+   
+                 </div>
 
+             </div>
+                     <!-- CONTENTS SECTION ENDS HERE -->
 
-
-
-
-
-
-
-
-
-			              
-          </div>
-
-
-     
+        </div>
     </div>
-     <!-- CONTENTS SECTION ENDS HERE -->
-
-     </div>
-                                            </div>
      <?php
 	require_once("footer.php");
 ?>
