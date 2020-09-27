@@ -265,7 +265,7 @@ function getBrands()   // function for displaying all the brands in the sidebar
                                                                     <p> $ <b>$pro_price</b></p> 
 
                                                                     <a href='details.php?pro_id=$pro_id' style='float:left'>Details</a>
-                                                                    <a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to cart</button></a>
+                                                                    <a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to cart</button></a>
 
                                                             </div>
                                                          ";
@@ -329,7 +329,7 @@ function getbrandpro()            // Displays products on the basis of brand sel
                                                                     <p> $ <b>$pro_price</b></p> 
 
                                                                     <a href='details.php?pro_id=$pro_id' style='float:left'>Details</a>
-                                                                    <a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to cart</button></a>
+                                                                    <a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to cart</button></a>
 
                                                             </div>
                                                          ";

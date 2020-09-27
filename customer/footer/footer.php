@@ -5,12 +5,12 @@
 
 			<div class="footer-left">
 
-				<img src="images/places/logo.png" title="Allawah Greens" style="color:White"></a>
+				<img src="../images/logo2.jpg" title="Allawah Greens" style="color:White"></a>
 
 				<div class="footer-links">
 					<ul>
-						<li><a href="login.php">Login</a></li>
-						<li><a href="contactUs.php">Contact us</a></li>
+						<li><a href="../customer_login.php">Login</a></li>
+						<li><a href="../contact_us.php">Contact us</a></li>
 					</ul>
 				</div>
 			</div>
@@ -26,7 +26,7 @@
 				</div>
 
 				<div>
-					<p><i class="fa fa-envelope"></i><a href="mailto:6576@ait.nsw.edu.au">allawah Greens@gmail.com</a></p>
+					<p><i class="fa fa-envelope"></i><a href="mailto:bikashgaire17@gmail.com">bikashgaire17@gmail.com</a></p>
 				</div>
 
 			</div>

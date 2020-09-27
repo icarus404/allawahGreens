@@ -199,7 +199,7 @@ include("includes/db.php");
             {
                $_SESSION['customer_email']=$c_email;
                echo "<script> alert('Account Created Successfully..!') </script>";
-                echo "<script>window.open('checkout.php','_self')</script>";   
+                echo "<script>window.open('index.php','_self')</script>";   
             }
 
 

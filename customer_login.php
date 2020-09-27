@@ -1,4 +1,6 @@
+<!Doctype>
 <?php
+ 
 include("includes/db.php");
 include("functions/functions.php");
 ?>
@@ -57,8 +59,8 @@ include("functions/functions.php");
       <div class="row mt-4">
         <div class="col-md-4 offset-md-4">
 	
-        <div id="customer_login">
-        <form  method="post" action="">
+        <div id="login">
+        <form  method="post" action="customer_login">
 
             
             <h4>Login to your account</h4>
@@ -89,7 +91,7 @@ include("functions/functions.php");
        {
           $c_email=$_POST['email'];
           $c_pass=$_POST['pass'];
-
+          
           $sel_c="select * from customers where customer_pass='$c_pass' and customer_email='$c_email'";
 
            $run_c=mysqli_query($con,$sel_c);

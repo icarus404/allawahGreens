@@ -11,7 +11,7 @@
 			<div class="title">
 				<div class="logo-ptitle-bar">
 					<div id="plogo">
-						<a><img src="images/places/logo.png" ></a>
+						<a><img src="images/logo.jpg" ></a>
 					</div>
 					<div id="page-title">
 						<h1>Allawah Greens</h1>

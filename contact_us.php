@@ -2,7 +2,7 @@
 <?php
 session_start();
 include("functions/functions.php");
-
+include("includes/db.php");
 ?>
 <?php
 	require_once("head.php");
@@ -76,6 +76,7 @@ include("functions/functions.php");
 						</div>
 			        </div>
 			        <div class="column">
+					<div id="contact">
 			            <form action="contactUs.php" method="post">
 			                <label for="name">Name</label>
 			                <input type="text" id="name" name="name" placeholder="Your name..">
@@ -87,11 +88,7 @@ include("functions/functions.php");
 
 
 			            </form>
-						<!-- {% if response %}
-							<div class="alert alert-success">
-								{{response}}
-							</div>
-						{%endif%} -->
+					</div>	
 			        </div>
 			    </div>
 			</div>
@@ -105,3 +102,34 @@ include("functions/functions.php");
 	require_once("footer.php");
 ?>
 </html>
+
+
+<?php
+include("includes/db.php");
+if( isset($_POST['contact'] )){
+  
+    $name = $_POST['name'];
+   $email = $_POST['email'];
+    
+    $message = $_POST['message'];
+   
+    $query = "INSERT INTO messages(m_name,m_email,m_message) VALUES ('$name'','$email','$message')";
+	$run_query=mysqli_query($con,$query);
+   
+    if($run_query) {
+		$response = "Message Sent. Thank You!";
+		echo "<script>window.open('index.php','_self')</script>";
+    }
+    else{
+		$response = "something went wrong";
+		echo "<script>window.open('contact_us.php','_self')</script>";
+    }
+    
+}
+
+
+
+
+
+
+?>

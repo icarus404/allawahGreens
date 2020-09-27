@@ -60,27 +60,27 @@ include("functions/functions.php");
 							<div class="row">
 								<div class="col-md-6">
 									<p></p>
-                                    <p>Ghumphir is a small tour company that provides Reliable and cheap tour services to Nepalese here in Sydney city. </p>
-                                    <p>We provide Nepali speaking tour guides for each tour targeting Non- english speaking and parents/relatives of Nepalese here in Sydney.</p>
-                                    <p>Currently we have Kumar basnet for our Sydney city tour,Rabin Tamang our special guide for canberra tour,Muna Rai for Beautiful Blue Mountains and James Karki for our NewCastle tour.</p>
+                                    <p>Allawah Greens is our family owned small local grocery store with all fresh produce. </p>
+                                    <p>We have wide varieties of asian spices, fresh produce, ready to eat meals and daily needs item.</p>
+                                    <p>We are open everyday from 9am - 10pm, drop by our store.</p>
 									
 									
                                     									
 									<ul class="list-icons">
-                                        <h3>At Ghumphir </h3>
+                                        <h3>At Allawah Greens</h3>
 										<li> Customer satisfaction is our top priority.</li>
-										<li> With easy site layout, Browsing had never been easier.</li>
-										<li> We gurantee quality service and low price.</li>
-										<li> We value our customers, we are ready to assist you.</li>
+										<li> Your one stop shop</li>
+										<li> Quality items and low price.</li>
+										<li> convenient location, near Train station</li>
 									</ul>
 								</div>
 
 								<aside class="sidebar col-md-6">
 									<div class="side vertical-divider-left">
 										<div class="block clearfix">
-											<h3 class="title margin-top-clear">Be part of us</h3>
+											<h3 class="title margin-top-clear">Support your Local Business</h3>
 											<div class="img">
-												<img src="images/places/logo.png">
+												<img src="images/Allawah1.jpg">
 											</div>
 										</div>
 									</div>
@@ -93,9 +93,9 @@ include("functions/functions.php");
 
 			<div class="section clearfix">
 				<div class="container">
-					<h2>Ghumphir Vision</h2>
-					<div class="separator-2"></div>
-					<p class="lead">All of our team members are continuously working to assist our customers and although we are currently targeting the Nepali community in paticular, we are planning to reach to other broader communities. We are currently working on getting some Hindi speaking Tour Guides to provide services large Indian community here and in near future we will continue to reach for other international communities here as well.  </p>
+					<h2>Allawah Greens vision</h2>
+					<div class="separator-2">Allawah Greens joined The Mission to help provide access to “Clean Water for All by 2030” on 24 May 2019. This Mission was initiated by the United Nations.</div>
+					<p class="lead"> </p>
 				</div>
             </div>
 			
