@@ -1,6 +1,6 @@
 <!Doctype>
 <?php
- 
+ session_start();
 include("includes/db.php");
 include("functions/functions.php");
 ?>
@@ -36,6 +36,7 @@ include("functions/functions.php");
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" >HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3" id="active">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
+            <li class="nav-item"><a href="cart.php" class="nav-link p-3">SHOPPING CART</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
@@ -58,9 +59,9 @@ include("functions/functions.php");
 <main class="container-fluid">
       <div class="row mt-4">
         <div class="col-md-4 offset-md-4">
-	
-        <div id="login">
-        <form  method="post" action="customer_login">
+          <div id="login">
+
+        <form  method="post" action="customer_login.php">
 
             
             <h4>Login to your account</h4>
@@ -77,7 +78,7 @@ include("functions/functions.php");
             <h3 style="float:center; padding:25px; al"><a href="customer_register.php">New? Register Here</a></h3>
              
         </form>
-        </div>  
+         </div> 
         </div>
       </div>
     </main>
@@ -123,7 +124,7 @@ include("functions/functions.php");
             {
                  $_SESSION['customer_email']=$c_email;
                echo "<script> alert('You're Logged in Successfully..!') </script>";
-                echo "<script>window.open('index.php','_self')</script>";
+                echo "<script>window.open('cart.php','_self')</script>";
             }
 
 

@@ -1,9 +1,9 @@
 <?php
-
+session_start();
 if(!isset($_SESSION['user_email']))
 {
 
-echo "<script> window.open('login.php?not_admin=You are not a admin !','_self') </script>";
+echo "<script> window.open('login.php?not_admin=You are not an admin !','_self') </script>";
 
 
 }

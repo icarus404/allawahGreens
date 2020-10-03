@@ -3,6 +3,7 @@
 session_start();
 include("functions/functions.php");
 
+
 ?>
 <?php
 	require_once("head.php");
@@ -11,7 +12,6 @@ include("functions/functions.php");
 <html>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/mfstyle.css">
-	
 	<link rel="stylesheet" href ="styles/style.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -32,9 +32,10 @@ include("functions/functions.php");
 				</button>
 				<div class="collapse navbar-collapse justify-content-left p-0" id="collapsibleNavbar">
 				  	<ul class="navbar-nav">
-                        <li class="nav-item"><a href="index.php" class="nav-link p-3" id="active">HOME</a></li>
+                        <li class="nav-item"><a href="index.php" class="nav-link p-3">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
+                        <li class="nav-item"><a href="cart.php" class="nav-link p-3" id="active">SHOPPING CART</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>

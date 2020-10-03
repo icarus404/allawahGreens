@@ -1,8 +1,10 @@
 <?php
-
+session_start();
 if(!isset($_SESSION['user_email']))
 {
-
+  // $admin=$_SESSION['user_email'];
+  // echo "$admin";
+  // exit();
 echo "<script> window.open('login.php?not_admin=You are not a admin !','_self') </script>";
 
 
@@ -10,7 +12,7 @@ echo "<script> window.open('login.php?not_admin=You are not a admin !','_self') 
 
 else
 {
-
+  
 
 ?>
 

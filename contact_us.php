@@ -31,6 +31,7 @@ include("includes/db.php");
 						<li class="nav-item"><a href="index.php" class="nav-link p-3">HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3">Login</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="cart.php" class="nav-link p-3">SHOPPING CART</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3" id="active">contact us</a></li>
                         </ul>
@@ -76,8 +77,8 @@ include("includes/db.php");
 						</div>
 			        </div>
 			        <div class="column">
-					<div id="contact">
-			            <form action="contactUs.php" method="post">
+					
+			            <form action="contact_us.php" method="post">
 			                <label for="name">Name</label>
 			                <input type="text" id="name" name="name" placeholder="Your name..">
 			                <label for="email">Email</label>
@@ -88,7 +89,7 @@ include("includes/db.php");
 
 
 			            </form>
-					</div>	
+						
 			        </div>
 			    </div>
 			</div>
@@ -106,7 +107,7 @@ include("includes/db.php");
 
 <?php
 include("includes/db.php");
-if( isset($_POST['contact'] )){
+if( isset($_POST['submit'] )){
   
     $name = $_POST['name'];
    $email = $_POST['email'];

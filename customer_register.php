@@ -41,6 +41,7 @@ include("includes/db.php");
                         <li class="nav-item"><a href="index.php" class="nav-link p-3" >HOME</a></li>
 						<li class="nav-item"><a href="customer_login.php" class="nav-link p-3" id="active">LOGIN</a></li>
 						<li class="nav-item"><a href="customer/my_account.php" class="nav-link p-3">My Account</a></li>
+						<li class="nav-item"><a href="cart.php" class="nav-link p-3">SHOPPING CART</a></li>
 						<li class="nav-item"><a href="aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
@@ -171,7 +172,6 @@ include("includes/db.php");
          $c_pass=$_POST['c_pass'];
          $c_image=$_FILES['c_image']['name'];
          $c_image_tmp=$_FILES['c_image']['tmp_name'];
-        //  $c_country=$_POST['c_country'];
          $c_city=$_POST['c_city'];
          $c_contact=$_POST['c_contact'];
          $c_address=$_POST['c_address'];
@@ -199,7 +199,7 @@ include("includes/db.php");
             {
                $_SESSION['customer_email']=$c_email;
                echo "<script> alert('Account Created Successfully..!') </script>";
-                echo "<script>window.open('index.php','_self')</script>";   
+                echo "<script>window.open('cart.php','_self')</script>";   
             }
 
 

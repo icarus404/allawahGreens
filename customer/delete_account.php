@@ -6,7 +6,7 @@
 
 <input style="color:green " type="submit" name="yes" value="Yes I am quite Sure" />
   &emsp;
-<input style="color:red " type="submit" name="no" value="No I was out of my Mind"/>
+<input style="color:red " type="submit" name="no" value="Noo, i'm just playing lol"/>
 
 
 	

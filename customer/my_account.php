@@ -1,6 +1,7 @@
 <!Doctype>
 <?php
 session_start();
+
 include("functions/functions.php");
 
 ?>
@@ -37,6 +38,7 @@ include("functions/functions.php");
 						<li class="nav-item"><a href="../index.php" class="nav-link p-3" >HOME</a></li>
 						<li class="nav-item"><a href="../customer_login.php" class="nav-link p-3">LOGIN</a></li>
 						<li class="nav-item"><a href="my_account.php" class="nav-link p-3" id="active">My Account</a></li>
+                        <li class="nav-item"><a href="../cart.php" class="nav-link p-3">SHOPPING CART</a></li>
 						<li class="nav-item"><a href="../aboutUs.php" class="nav-link p-3">ABOUT US</a></li>
 						<li class="nav-item"><a href="../contact_us.php" class="nav-link p-3">CONTACT US</a></li>
                         </ul>
@@ -67,22 +69,27 @@ include("functions/functions.php");
 			                 
 			                    <ul id="cats">
                                    <?php
-                                    $user=isset($_SESSION['customer_email']);
+                                    if(isset($_SESSION['customer_email'])) {
+                                        
+                                    $user=$_SESSION['customer_email'];
 
                                     $get_img="select * from customers where customer_email='$user'";
                                     $run_img=mysqli_query($con,$get_img);
 
                                     $row_img=mysqli_fetch_array($run_img);
 
-                                    $c_image=isset($row_img['customer_image']);
+                                    $c_image=$row_img['customer_image'];
 
-                                    $c_name=isset($row_img['customer_name']);
+                                    $c_name=$row_img['customer_name'];
+                                        
+                                    //
+                                    
 
 
                                     echo "<p style='text-align:center;'>  <img src='customer_images/$c_image' width='150' height='150' />";
 
 
-
+                                }
 
 
                                      ?>
@@ -191,6 +198,7 @@ include("functions/functions.php");
 
 
                                 ?>
+                               
                             </div>	
                 </div>
             </div>                       
