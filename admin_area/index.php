@@ -42,8 +42,8 @@ else
                   <a href="index.php?insert_brand">Insert New Brand</a>
                   <a href="index.php?view_brands">View All Brands</a>
                     <a href="index.php?view_customers">View Customers</a>
-                    <!-- <a href="index.php?view_orders">View Orders</a>
-                      <a href="index.php?view_payments">View Payments</a> -->
+                     <a href="index.php?view_message">View Messages</a>
+                       
                       <a href="logout.php">Admin Logout</a>
 
         
@@ -101,6 +101,12 @@ else
                {
                 include("view_customers.php");
                }
+
+               if(isset($_GET['view_message']))
+               {
+                include("view_message.php");
+               }
+
 
      	?>
      

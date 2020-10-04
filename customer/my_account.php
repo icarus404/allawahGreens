@@ -151,6 +151,7 @@ include("functions/functions.php");
                             <div id="products_box">
     
                                 <?php
+                                global $c_name;
                                     if(!isset($_GET['my_orders']))
                                     {
 

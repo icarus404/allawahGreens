@@ -49,12 +49,6 @@ include("includes/db.php");
 					</div>
 		            </form>
 				
-				<!-- <form>
-					<input type="text" />
-					<input type="submit" value="search">
-</form> -->
-					
-				
 				</div>
 				<!-- </div> -->
 			</div>  
@@ -96,33 +90,26 @@ include("includes/db.php");
 		</main>
 		
 			
-		
-	</div>	
-</body>
-<?php
-	require_once("footer.php");
-?>
-</html>
-
-
 <?php
 include("includes/db.php");
+
 if( isset($_POST['submit'] )){
   
     $name = $_POST['name'];
    $email = $_POST['email'];
     
     $message = $_POST['message'];
-   
-    $query = "INSERT INTO messages(m_name,m_email,m_message) VALUES ('$name'','$email','$message')";
+//    echo $name;
+//    exit();
+    $query = "insert into messages(m_name,m_email,m_message) values ('$name','$email','$message')";
 	$run_query=mysqli_query($con,$query);
    
     if($run_query) {
-		$response = "Message Sent. Thank You!";
+	 echo "<script> alert('Message sent. Thank You!')</script>";
 		echo "<script>window.open('index.php','_self')</script>";
     }
     else{
-		$response = "something went wrong";
+		echo "<script> alert('Something went wrong!')</script>";
 		echo "<script>window.open('contact_us.php','_self')</script>";
     }
     
@@ -134,3 +121,11 @@ if( isset($_POST['submit'] )){
 
 
 ?>
+		
+	</div>	
+</body>
+<?php
+	require_once("footer.php");
+?>
+</html>
+

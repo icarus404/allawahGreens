@@ -130,7 +130,7 @@ include("functions/functions.php");
              
 			              <div id="products_box">
 			                       <br>
-
+                                   
                             <form action="" method="post" enctype="multipart/form-data">
                                        <table align="center" width="700"  >
                                        	  <tr style="color: blue">
@@ -187,7 +187,7 @@ include("functions/functions.php");
                                                       <br><br><br>
 
  
-                                                        <input type="number"  name="qty" min="1" size="" value="<?php echo 'SESSION["qty"]'; ?>" />       
+                                                        <input type="number"  name="qty" min="1" size="" value="<?php echo 'SESSION["qty"]' ?>" />       
                                                           
                                                     </td>
                                                        
